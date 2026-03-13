@@ -43,16 +43,6 @@ int plusGrand(int a, int b, int c);
 	return max;
 }
 
-
-
-
-
-
-
-
-
-
-
 //Fonctions réalisées par l'étudiant 2 :
 //Fonction permettant de savoir si un nombre est pair ou non
 bool estPair(int nb) {
