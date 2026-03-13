@@ -66,11 +66,18 @@ int plusGrand(int a, int b, int c);
 
 //Fonctions réalisées par l'étudiant 3 :
 
+<<<<<<< Updated upstream
 //fonction qui verifie si il est pair ou divisible par 8
 bool estImpair(int nb) {
     // Vérifie si n est impair ou divisible par 8
     return (nb % 2 != 0) || (nb % 8 == 0);
 	
+=======
+
+bool estImpair(int nb) {
+    // Vérifie si n est impair ou divisible par 8
+    return (nb % 2 != 0) || (nb % 8 == 0);
+>>>>>>> Stashed changes
     int nombre;
 
     cout << "Entrez un nombre : ";
@@ -88,6 +95,10 @@ bool estImpair(int nb) {
 // Fonction qui retourne la moyenne de trois nombres
 double moyenne(double nb1, double nb2, double nb3) {
     return (nb1 + nb2 + nb3) / 3.0;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     double x, y, z;
 
     cout << "Entrez trois nombres : ";
@@ -107,7 +118,11 @@ double reduction(int prix, int reduc) {
     double prixFinal = prixReduit * 1.055;
     
     return prixFinal;
+<<<<<<< Updated upstream
 	
+=======
+
+>>>>>>> Stashed changes
     double prix, reductionPourc;
 
     cout << "Entrez le prix : ";
@@ -130,6 +145,10 @@ int nombreMedian(int a, int b, int c) {
         return b;
     else
         return c;
+<<<<<<< Updated upstream
+=======
+	
+>>>>>>> Stashed changes
     int x, y, z;
     cout << "Entrez trois nombres : ";
     cin >> x >> y >> z;
@@ -137,4 +156,8 @@ int nombreMedian(int a, int b, int c) {
     cout << "Le nombre médian est : " << nombreMedian(x, y, z) << endl;
 
     return 0;
+<<<<<<< Updated upstream
+=======
+}
+>>>>>>> Stashed changes
 }
