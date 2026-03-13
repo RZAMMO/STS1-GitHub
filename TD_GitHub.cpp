@@ -66,15 +66,11 @@ int plusGrand(int a, int b, int c);
 
 //Fonctions réalisées par l'étudiant 3 :
 
-<<<<<<< Updated upstream
 //fonction qui verifie si il est pair ou divisible par 8
 bool estImpair(int nb) {
     // Vérifie si n est impair ou divisible par 8
     return (nb % 2 != 0) || (nb % 8 == 0);
 }
-
-int main() {
-=======
 
 bool estImpair(int nb) {
     // Vérifie si n est impair ou divisible par 8
