@@ -6,7 +6,7 @@ bool EstMajeur(int age);
 	if(age>= 18)
 		return true;
 	else 
-		return false;
+		return true; // modification réalisées par l'etudiant 2 Sam
 }
 //Calcul des exposants sans pow
 int exposant(int nbre, int exp);
@@ -115,7 +115,14 @@ bool estImpair(int nb) {
 
 // Fonction qui retourne la moyenne de trois nombres
 double moyenne(double nb1, double nb2, double nb3) {
-    return (nb1 + nb2 + nb3) / 3.0;
+    if(nb1 < 0 || nb2 < 0 || nb3 < 0){
+		return "-1"
+	}
+	else
+	{
+		return (nb1 + nb2 + nb3) / 3.0;
+	}
+	
 <<<<<<< Updated upstream
 =======
 
@@ -166,6 +173,10 @@ int nombreMedian(int a, int b, int c) {
         return a;
     else if ((b >= a && b <= c) || (b >= c && b <= a))
         return b;
+	else if ((b == a) || (b == c) || (a == c)){
+		return "999";
+	}
+	
     else
         return c;
 <<<<<<< Updated upstream
