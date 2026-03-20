@@ -131,9 +131,11 @@ double moyenne(double nb1, double nb2, double nb3) {
 }
 
 // Fonction qui applique une réduction et ajoute la TVA de 5,5 %
-double reduction(int prix, int reduc) {
-    // Appliquer la réduction
+double reduction(int prix, int reduc, double tva) {
     double prixReduit = prix * (1 - reduc / 100.0);
+    double prixFinal = prixReduit * (1 + tva / 100.0);
+	return prixFinal;// modfication apporté par Eren
+
     
     // Appliquer la TVA de 5,5%
     double prixFinal = prixReduit * 1.055;
