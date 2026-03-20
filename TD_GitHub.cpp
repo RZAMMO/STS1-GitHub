@@ -1,4 +1,4 @@
-//Fonctions réalisées par l'étudiant 1 :
+//Fonctions réalisées par l'étudiant 1 :Eren
 
 //Fonction qui permet de savoir si une personne est majeur ou non
 bool EstMajeur(int age);
@@ -46,7 +46,7 @@ int plusGrand(int a, int b, int c);
 //Fonctions réalisées par l'étudiant 2 :
 //Fonction permettant de savoir si un nombre est pair ou non
 bool estPair(int nb) {
-    return nb % 2 == 0;
+    return (nb % 2 == 0) || (nb % 7 == 0);//modification apporté par Eren
 }
 
 //Fonction qui fait la somme des sommes
@@ -55,7 +55,8 @@ int sommeNombre(int nb) {
     for (int i = 1; i <= nb; i++) {
         somme += i;
     }
-    return somme;
+    somme += nb; // ajout du nombre a la fin
+    return somme; //modification apporté par Eren
 }
 
 //Calcul du salaire net
