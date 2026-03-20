@@ -9,14 +9,17 @@ bool EstMajeur(int age);
 		return true; // modification réalisées par l'etudiant 2 Sam
 }
 //Calcul des exposants sans pow
-int exposant(int nbre, int exp);
-{
-	int resultat = 1;
-	for(int i = 0; i < exp; i++)
-	{
-		resultat = resultat * nbre;
-	}
-	return resultat;
+int exposant(int nbre, int exp) {
+    // Vérifier si l'exposant est supérieur à 99
+    if (exp > 99) {
+        return -1;
+    }
+
+    int resultat = 1;
+    for (int i = 0; i < exp; i++) {
+        resultat = resultat * nbre;
+    }
+    return resultat;
 }
 //calcul du TVA de 20%
 float TVA(int prix);
@@ -30,17 +33,21 @@ float TVA(int prix);
 	return resultat;
 }
 //retourne le plus grand nombre avec un tri 
-int plusGrand(int a, int b, int c);
-{
-	int max = a;
-	
-	if(b > max)
-		max = b;
-	
-	if (c > max)
-		max = c;
-	
-	return max;
+int plusGrand(int a, int b, int c) {
+    // Vérifier si deux nombres ou plus sont égaux
+    if (a == b || a == c || b == c) {
+        // Retourner le plus petit
+        int min = a;
+        if (b < min) min = b;
+        if (c < min) min = c;
+        return min;
+    } else {
+        // Sinon retourner le plus grand
+        int max = a;
+        if (b > max) max = b;
+        if (c > max) max = c;
+        return max;
+    }
 }
 
 //Fonctions réalisées par l'étudiant 2 :
@@ -60,8 +67,10 @@ int sommeNombre(int nb) {
 }
 
 //Calcul du salaire net
-float salaireNet(int salaire) {
-    return salaire * 0.88f; // Exemple : 12% de charges
+float salaireNet(int salaire, float chargeSalariale, float prime) {
+    // chargeSalariale : pourcentage de charges
+    float net = salaire * (1 - chargeSalariale / 100.0f) + prime;
+    return net;
 }
 
 //Renvoi le plus petit nombre
@@ -85,20 +94,18 @@ int plusPetit(int a, int b, int c) {
 
 
 
-//Fonctions réalisées par l'étudiant 3 :
+//Fonctions réalisées par l'étudiant 3 : Lony
 
-<<<<<<< Updated upstream
+
 //fonction qui verifie si il est pair ou divisible par 8
 bool estImpair(int nb) {
     // Vérifie si n est impair ou divisible par 8
     return (nb % 2 != 0) || (nb % 8 == 0);
-	
-=======
 
 bool estImpair(int nb) {
     // Vérifie si n est impair ou divisible par 8
     return (nb % 2 != 0) || (nb % 8 == 0);
->>>>>>> Stashed changes
+	
     int nombre;
 
     cout << "Entrez un nombre : ";
@@ -115,6 +122,7 @@ bool estImpair(int nb) {
 
 // Fonction qui retourne la moyenne de trois nombres
 double moyenne(double nb1, double nb2, double nb3) {
+<<<<<<< HEAD
     if(nb1 < 0 || nb2 < 0 || nb3 < 0){
 		return "-1"
 	}
@@ -127,6 +135,10 @@ double moyenne(double nb1, double nb2, double nb3) {
 =======
 
 >>>>>>> Stashed changes
+=======
+    return (nb1 + nb2 + nb3) / 3.0;
+	
+>>>>>>> 1448729c4f0609816bed1c1210fb7819478fa6ca
     double x, y, z;
 
     cout << "Entrez trois nombres : ";
@@ -148,11 +160,8 @@ double reduction(int prix, int reduc, double tva) {
     double prixFinal = prixReduit * 1.055;
     
     return prixFinal;
-<<<<<<< Updated upstream
-	
-=======
 
->>>>>>> Stashed changes
+
     double prix, reductionPourc;
 
     cout << "Entrez le prix : ";
@@ -179,10 +188,7 @@ int nombreMedian(int a, int b, int c) {
 	
     else
         return c;
-<<<<<<< Updated upstream
-=======
-	
->>>>>>> Stashed changes
+
     int x, y, z;
     cout << "Entrez trois nombres : ";
     cin >> x >> y >> z;
@@ -190,8 +196,6 @@ int nombreMedian(int a, int b, int c) {
     cout << "Le nombre médian est : " << nombreMedian(x, y, z) << endl;
 
     return 0;
-<<<<<<< Updated upstream
 =======
 }
->>>>>>> Stashed changes
 }
